@@ -279,8 +279,8 @@ footer > div:last-child {
 }
 
 footer > div > div {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     display: flex;
 }
 
@@ -293,7 +293,7 @@ footer > div > div:nth-child(2) {
 }
 
 footer > div > div:last-child {
-    width: 180px !important;
+    width: 200px !important;
 }
 
 .nav-mobile {
