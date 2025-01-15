@@ -154,9 +154,7 @@ section .content > .content-inner {
     flex: 1;
 }
 
-.section-author .content > .img-container {
-    order: 2;
-}
+
 
 .content-inner {
     background: transparent;
@@ -425,6 +423,13 @@ section > * {
     opacity: 1;
 }
 
+
+.hyperlink {
+    color : var(--color-accent-deepblue);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 @media (min-width: 1340px) and (max-width: 1680px) {
     header, footer {
         padding: 15px 7vw;
@@ -577,10 +582,4 @@ section > * {
         --font-size-sm: calc(var(--font-size-base));
         --font-size-xsm: calc(var(--font-size-base) * .8);
     }
-}
-
-.hyperlink {
-    color : var(--color-accent-deepblue);
-    text-decoration: underline;
-    cursor: pointer;
 }
