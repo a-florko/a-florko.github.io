@@ -154,8 +154,6 @@ section .content > .content-inner {
     flex: 1;
 }
 
-
-
 .content-inner {
     background: transparent;
     padding: 1.250em;
@@ -200,7 +198,7 @@ section .content > .content-inner {
     gap: 15px;
 }
 
-.text.verse > .column:nth-child(2) > p:first-of-type {
+.padding-top {
     padding-top: 5.5em;
 }
 
