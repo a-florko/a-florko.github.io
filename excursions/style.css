@@ -90,10 +90,10 @@ nav .nav-list {
     color: #FFFFFF;
     font-weight: 600;
 }
+
 .nav-list > li > a:hover {
     color: var(--color-accent-deepblue) !important;
 }
-
 
 nav > .nav-logo {
     width: 120px;
@@ -118,10 +118,10 @@ section {
     flex-direction: column;
     gap: 50px;
 }
+
 .logo-mobile {
     display: none;
 }
-
 
 section .content {
     display: flex;
@@ -132,7 +132,15 @@ section .content:last-of-type {
     padding-bottom: 150px;
 }
 
+.padding-after-content {
+    padding-bottom: 150px;
+}
+
 section:not(:last-child) .content:last-of-type {
+    border-bottom: 3px solid var(--color-accent-deepblue);
+}
+
+.content-border {
     border-bottom: 3px solid var(--color-accent-deepblue);
 }
 
@@ -289,7 +297,7 @@ footer > div > div:nth-child(2) {
 }
 
 footer > div > div:last-child {
-    width: 200px !important;
+    width: 240px;
 }
 
 .nav-mobile {
@@ -568,6 +576,10 @@ section > * {
 
     section > .title {
         margin-top: 50px;
+    }
+
+    .padding-top {
+        padding-top: 8em;
     }
 }
 @media (max-width: 320px) {
