@@ -429,11 +429,14 @@ section > * {
     opacity: 1;
 }
 
-
 .hyperlink {
     color : var(--color-accent-deepblue);
     text-decoration: underline;
     cursor: pointer;
+}
+
+.text-align-right {
+    text-align: right;
 }
 
 @media (min-width: 1340px) and (max-width: 1680px) {
@@ -511,11 +514,6 @@ section > * {
         --font-size-base: 12px !important;
     }
 
-    footer > div > div {
-        width: 60px;
-        height: 40px;
-    }
-
     section {
         padding: 50px 5vw !important;
     }
@@ -562,7 +560,6 @@ section > * {
     }
 
     footer > div > div {
-        width: 30% !important;
         height: auto;
     }
 
@@ -581,6 +578,24 @@ section > * {
     .padding-top {
         padding-top: 8em;
     }
+
+    footer > div > div:first-child {
+        width: 150px !important;
+    }
+
+    footer > div > div:nth-child(2) {
+        width: 100px !important;
+    }
+
+    footer > div > div:nth-child(3) {
+        margin: 0px;
+        width: 150px !important;
+    }
+
+    footer > div > div:last-child {
+        width: 250px !important;
+    }
+    
 }
 @media (max-width: 320px) {
     :root {
