@@ -184,6 +184,12 @@ section .content > .content-inner {
     padding: 20px 10px 20px 20px  ;
 }
 
+.cursive-in-ribbon {
+    font-style: italic;
+    font-size: var(--font-size-md);
+    color: #FFFFFF;
+}
+
 .content-inner > .text {
     padding: 25px 0 5px 0;
     display: flex;
@@ -278,7 +284,7 @@ footer > div:first-child {
 footer > div:last-child {
     padding: 50px 0;
     display: flex;
-    gap: 50px;
+    
     justify-content: space-around;
 }
 
@@ -297,7 +303,7 @@ footer > div > div:nth-child(2) {
 }
 
 footer > div > div:last-child {
-    width: 240px;
+    width: 300px;
 }
 
 .nav-mobile {
