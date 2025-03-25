@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap');
+
+:root {
+    --font-size-xxlg: 72px;
+    --font-size-xlg: 48px;
+    --font-size-lg: 28px;
+    --font-size-md: 22px;
+    --font-size-sm: 16px;
+    --font-size-xsm: 14px;
+
+    --font-weight-bold: 600;
+    --font-weight-semibold: 400;
+    --font-weight-regular: 300;
+    --font-weight-light: 200;
+
+    --color-accent: #126478;
+    --color-bg: #95bec3;
+    --color-text-darkgrey: #2F4F4F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.font-size-md {
+    font-size: var(--font-size-md);
+}
+
+.font-size-lg {
+    font-size: var(--font-size-lg);
+}
+
+.font-size-xlg {
+    font-size: var(--font-size-xlg);
+}
+
+.font-size-xxlg {
+    font-size: var(--font-size-xxlg);
+}
+
+.font-weight-bold {
+    font-weight: 600;
+}
+
+.font-weight-semibold {
+    font-weight: 500;
+}
+
+html {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    padding: 50px 0px;
+    width: 80%;
+    background: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+}
+
+header nav {
+    border-bottom: 3px solid var(--color-accent);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+
+header .header-top {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: bottom;
+}
+
+.main-title {
+    max-height: 10%;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    color: var(--color-text-darkgrey);
+}
+
+.header-top .city-logo,
+.project-logo {
+    max-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.header-top .city-logo img {
+    height: 70px;
+    width: 95px;
+}
+
+.header-top .project-logo img {
+    height: 80px;
+}
+
+header>h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 100px 150px;
+    transform: scale(1.2);
+    transition-duration: 1.5s;
+}
+
+h1 span {
+    font-size: 3rem;
+    display: block;
+}
+
+.section-intro {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.section-intro>.content {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.content-qr {
+    flex-direction: row-reverse;
+}
+
+.section-intro>.content>div {
+    flex: 1;
+}
+
+.section-intro>.content>div:first-child {
+    position: relative;
+}
+
+.section-intro>.content-authors {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 240px;
+}
+
+.section-intro>.content-authors>div:first-child {
+    width: 100%;
+}
+
+.content-span {
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
+    display: block;
+    padding: 50px;
+    background: white;
+}
+
+.content-side-span {
+    min-width: 125%;
+}
+
+.section-intro>.content-info>div>span {
+    top: 35%;
+}
+
+.section-intro>.content-qr>div>span {
+    top: 35%;
+    right: 0%;
+}
+
+.section-intro>.content-authors>div>span {
+    width: 50%;
+    left: 25%;
+    top: -140px;
+    min-width: 0%;
+    text-align: center;
+}
+
+.intro-img {
+    width: 900px;
+    height: 600px;
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+.section-roadmap-icon {
+    height: 100px;
+    width: 80px;
+}
+
+.roadmap-right-card-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section-roadmap {
+    margin-top: 100px;
+    border-bottom: 3px solid var(--color-accent);
+    padding-bottom: 100px;
+}
+
+.section-roadmap-title-wrapper {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 50px;
+}
+
+.section-roadmap-title {
+    color: var(--color-text-darkgrey);
+    align-self: center;
+    margin-left: 20px;
+}
+
+.section-roadmap>div:nth-child(4n + 4) {
+    display: flex;
+    margin: -5px 100px -5px 0;
+}
+
+.roadmap-card {
+    width: 60%;
+    display: flex;
+    gap: 25px;
+    box-shadow: 0 8px 14px rgba(34, 74, 152, 0.3);
+    padding: 50px;
+    background: white;
+    border-radius: 10px;
+}
+
+.roadmap-card>.info {
+    flex: 3;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.location-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 10px;
+}
+
+.roadmap-card>.img {
+    flex: 2;
+    width: 100%;
+    max-height: 300px;
+}
+
+.roadmap-card>.img>img {
+    width: 100%;
+    height: 100%;
+}
+
+.roadmap-item-left {
+    position: relative;
+    z-index: -1;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    margin: -5px 0 -5px 0;
+}
+
+.roadmap-item-left>img {
+    height: 100%;
+}
+
+.location-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 10px;
+    background: var(--color-accent);
+    text-decoration: none;
+    width: 50%;
+}
+
+.location-btns-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.location-link {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section>* {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.section-project-authors {
+    margin-top: 100px;
+    border-bottom: 3px solid var(--color-accent);
+    padding-bottom: 50px;
+}
+
+.section-project-authors-title {
+    color: var(--color-text-darkgrey);
+    text-align: center;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+@media (max-width: 1536px) {
+    .intro-img {
+        width: 800px;
+        height: 550px;
+    }
+
+    .section-intro>.content-info>div>span,
+    .section-intro>.content-qr>div>span {
+        top: 35%;
+    }
+
+    .content-side-span {
+        min-width: 160%;
+    }
+
+    .font-size-lg {
+        font-size: 26px;
+    }
+
+    .section-intro>.content-authors>div>span {
+        width: 60%;
+        left: 20%;
+    }
+
+    .roadmap-card {
+        width: 70%;
+    }
+
+    .section-roadmap>div:nth-child(4n + 4) {
+        margin: 0px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .intro-img {
+        width: 700px;
+        height: 500px;
+    }
+
+    .content-side-span {
+        top: 30%;
+        min-width: 150%;
+    }
+
+    .font-weight-bold {
+        font-weight: 500;
+    }
+
+    .font-size-lg {
+        font-size: 24px;
+    }
+
+    .section-intro>.content-authors>div>span {
+        width: 60%;
+        left: 20%;
+    }
+
+    .roadmap-card {
+        width: 85%;
+    }
+
+    .font-size-xxlg {
+        font-size: 60px;
+    }
+
+    .location-text > .font-size-lg {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 414px) {
+    .font-size-md {
+        font-size: 17px;
+    }
+
+    .font-size-lg {
+        font-size: 16px;
+    }
+
+    .font-size-xlg {
+        font-size: 21px;
+    }
+
+    .font-size-xxlg {
+        font-size: 36px;
+    }
+
+    body {
+        padding-top: 10px;
+        width: 100%;
+    }
+
+    .header-top .city-logo img {
+        height: 45px;
+        width: 60px;
+        margin-left: 10px;
+    }
+
+    .header-top .project-logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .section-intro>.content {
+        margin-top: 80px;
+    }
+    
+    .section-intro > .content-qr > div  {
+        width: 40%;
+        margin-top: 50px;
+    }
+
+    .section-intro > .content-qr > div, .section-intro > .content-info > div  {
+        width: 40%;
+    }
+
+    .section-intro>.content-qr>div>span, .section-intro>.content-info>div>span {
+        left: -38%;
+        top: -70px;
+        text-align: center;
+    }
+
+    .content-side-span {
+        min-width: 175%;
+    }
+
+    .section-intro>.content-authors {
+        margin-top: 130px;
+    }
+
+    .section-intro>.content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .section-intro>.content-authors>div>span {
+        top: -70px;
+    }
+
+    .section-intro>.content-authors>div:first-child {
+        width: 120%;
+    }
+
+    .content-span {
+        padding: 20px;
+    }
+
+    .intro-img {
+        width: 90%;
+        height: auto;
+    }
+
+    .section-roadmap {
+        margin-top: 50px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .section-roadmap-icon {
+        height: 50px;
+        width: 40px;
+    }
+
+    .section-roadmap-title {
+        margin-left: 10px;
+    }
+
+    .section-roadmap-title-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    .location-text > .font-size-lg {
+        font-size: 21px;
+    }
+
+    .roadmap-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .roadmap-item-left {
+        height: 25vh;
+    }
+}
+
+@media (max-width: 360px) {
+    .font-size-xlg {
+        font-size: 19px;
+    }
+
+    .section-intro > .content-info > div, .section-intro > .content-qr > div {
+        width: 50%;
+    }
+
+    .section-intro>.content-info>div>span, .section-intro>.content-qr>div>span  {
+        left: -25%;
+    }
+
+    .section-intro>.content-authors>div>span {
+        width: 75%;
+    }
+
+    .section-intro>.content-authors>div>span {
+        left: 12.5%;
+    }
+
+    body > main > section.section-project-authors > h1 {
+        font-size: 2rem;
+    }
+}

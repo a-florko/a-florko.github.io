@@ -1,166 +1,360 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="excursions-page/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+    <title>Читати Житомир</title>
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
 </head>
+
 <body>
     <header>
-        <div class="title">
-            <h2>Читати Житомир</h2>
-        </div>
+        <nav>
+            <div class="header-top">
+                <div class="city-logo">
+                    <img src="/assets/images/logos/zhytomyr_logo.png" alt="Логотип Житомира">
+                </div>
+                <div class="main-title font-size-xlg">
+                    ЧИТАТИ ЖИТОМИР
+                </div>
+                <div class="project-logo">
+                    <img src="/assets/images/logos/reading-zt-transparent-logo.png" alt="Логотип проєкту">
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
+        <section class="section-intro">
+            <div class="content content-info">
+                <div class="font-weight-semibold font-size-lg">
+                    <span class="font-weight-bold font-size-lg content-span content-side-span">
+                        ПРОЄКТ, ЩО ВІДКРИВАЄ ЖИТОМИР ЧЕРЕЗ УКРАЇНСЬКУ КУЛЬТУРУ
+                    </span>
+                </div>
+                <img src="assets/images/city_administration.jpg" alt="Адміністрація міста" class="intro-img rounded">
+            </div>
+
+            <div class="content content-qr">
+                <div class="font-weight-semibold font-size-lg ">
+                    <span class="font-weight-bold font-size-lg content-span content-side-span">
+                        СКАНУЙ QR-КОДИ ТА ПІЗНАВАЙ ПАМ'ЯТКИ СВОГО МІСТА
+                    </span>
+                </div>
+                <img src="assets/images/qr_example.jpg" alt="QR-код" class="intro-img rounded">
+            </div>
+
+            <div class="content content-authors">
+                <div class="font-weight-semibold font-size-lg">
+                    <span class="font-weight-bold font-size-lg content-span">
+                        ДІЗНАЙСЯ, ЯКІ АВТОРИ ОСПІВУВАЛИ ТУ ЧИ ІНШУ ЛОКАЦІЮ
+                    </span>
+                </div>
+                <img src="assets/images/authors_exmaple.jpg" alt="Автори" class="intro-img rounded">
+            </div>
+        </section>
+
         <section class="section-roadmap">
-            <div>
+            <div class="section-roadmap-title-wrapper">
+                <img src="assets/images/location_icon.svg" class="section-roadmap-icon" alt="Іконка локації">
+                <h1 class="section-roadmap-title font-size-xxlg">ЛОКАЦІЇ</h1>
+            </div>
+            <div class="roadmap-card">
+                <div class="info">
+                    <div class="location-text">
+                        <div class="font-size-lg font-weight-bold">
+                            Старий бульвар
+                        </div>
+                        <div class="font-size-md font-weight-semibold">
+                            Kostelna Street, 8
+                        </div>
+                        <div>
+                            Старий бульвар з комплексом фонтанів і благоустроєм є пам'яткою архітектури місцевого
+                            значення. Вагома частка житлової та громадської забудови вулиці представлена
+                            архітектурою
+                            другої половини ХІХ — початку ХХ століття.
+                        </div>
+                    </div>
+                    <div class="location-btns-wrapper">
+                        <div class="location-btn">
+                            <a class="location-link" href="/excursions/old-boulevard/index.html">читати</a>
+                        </div>
+                        <div class="location-btn">
+                            <a class="location-link" href="https://maps.app.goo.gl/6yeVc1DWo7L9uAt36">на карті</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="/excursions/old-boulevard/assets/images/old-boulevard.jpg"
+                        class="rounded" alt="Старий бульвар">
+                </div>
+            </div>
+
+
+            <div class="roadmap-item-left">
+                <img src="assets/images/roadmap_line_left.svg" alt="Лінія дорожньої карти зліва" />
+            </div>
+
+            <div class="roadmap-right-card-wrapper">
                 <div class="roadmap-card">
                     <div class="info">
-                        <div class="color-accent font-size-md font-weight-bold">
-                            <a href="excursions/old_boulevard/index.html">Старий бульвар</a>
+                        <div class="location-text">
+                            <div class="font-size-lg font-weight-bold">
+                                Водонапірна Вежа та Житомирська обласна філармонія ім. С.Ріхтера
+                            </div>
+                            <div class="font-size-md font-weight-semibold">
+                                Kostelna Street, 8
+                            </div>
+                            <div>
+                                Історична споруда на вулиці Пушкінській,24 у місті Житомирі, споруджена 1898 року.
+                                Використовувалась як регулятор тиску води та пожежна оглядова вежа - каланча.
+                            </div>
                         </div>
-                        <div class="color-text font-size-xsm font-weight-light">Kostelna Street, 8</div>
-                        <div class="color-text font-size-sm font-weight-light">
-                            Старий бульвар з комплексом фонтанів і благоустроєм є пам'яткою архітектури місцевого значення. Вагома частка житлової та громадської забудови вулиці представлена архітектурою другої половини ХІХ — початку ХХ століття.                        </div>
-                        <div class="btn-wrapper">
-                            <a href="">See on map</a>
+                        <div class="location-btns-wrapper">
+                            <div class="location-btn">
+                                <a class="location-link" href="/excursions/tower-and-philharmonic/index.html">читати</a>
+                            </div>
+                            <div class="location-btn">
+                                <a class="location-link" href="https://maps.app.goo.gl/tukbF7ig1gs1TgTG7">на карті</a>
+                            </div>
                         </div>
                     </div>
                     <div class="img">
-                        <img src="https://zt-news.org.ua/uploads/posts/2013-03/1364585322_595348_original.jpg" alt="">
+                        <img src="/assets/images/locations/tower-and-philharmonic.jpg"
+                            class="rounded" alt="Водонапірна Вежа та Житомирська обласна філармонія ім. С.Ріхтера">
                     </div>
                 </div>
             </div>
-            <div class="roadmap-item-left"><img src="excursions-page/images/roadmap_line_left.svg" alt=""></div>
-            <div>
+
+            <div class="roadmap-item-left">
+                <img src="assets/images/roadmap_line_right.svg" alt="Лінія дорожньої карти справа">
+            </div>
+
+
+            <div class="roadmap-card">
+                <div class="info">
+                    <div class="location-text">
+                        <div class="font-size-lg font-weight-bold">
+                            Житомирська обласна універсальна наукова бібліотека ім. Олега Ольжича
+                        </div>
+                        <div class="font-size-md font-weight-semibold">
+                            Kostelna Street, 8
+                        </div>
+                        <div>
+                            Saint Sophia Cathedral (Ukrainian: Кафедральний собор св. Софії) is a Catholic church
+                            that
+                            serves as the principal church of the Roman Catholic Diocese of Kyiv-Zhytomyr, Ukraine.
+                            The
+                            temple was built between 1746 and 1748 and was founded by Bishop Samuel Jan Ozga.
+                        </div>
+                    </div>
+                    <div class="location-btns-wrapper">
+                        <div class="location-btn">
+                            <a class="location-link" href="/excursions/library/index.html">читати</a>
+                        </div>
+                        <div class="location-btn">
+                            <a class="location-link" href="https://maps.app.goo.gl/fABpQagZCMMXfBtcA">на карті</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="https://ube.nlu.org.ua/Image/2014051610545912.jpg" class="rounded" alt="Житомирська обласна універсальна наукова бібліотека ім. Олега Ольжича">
+                </div>
+            </div>
+
+            <div class="roadmap-item-left">
+                <img src="assets/images/roadmap_line_left.svg" alt="Лінія дорожньої карти зліва">
+            </div>
+
+            <div class="roadmap-right-card-wrapper">
                 <div class="roadmap-card">
                     <div class="info">
-                        <div class="color-accent font-size-sm font-weight-semibold">Водонапірна Вежа</div>
-                        <div class="color-text font-size-xsm font-weight-light">Kostelna Street, 8</div>
-                        <div class="color-text font-size-sm font-weight-light">
-                            Історична споруда на вулиці Пушкінській,24 у місті Житомирі, споруджена 1898 року. Використовувалась як регулятор тиску води та пожежна оглядова вежа - каланча.                        </div>
-                        <div class="btn-wrapper">
-                            <a href="">See on map</a>
+                        <div class="location-text">
+                            <div class="font-size-lg font-weight-bold">
+                                Майдан Корольова
+                            </div>
+                            <div class="font-size-md font-weight-semibold">
+                                Kostelna Street, 8
+                            </div>
+                            <div>
+                                Saint Sophia Cathedral (Ukrainian: Кафедральний собор св. Софії) is a Catholic church
+                                that
+                                serves as the principal church of the Roman Catholic Diocese of Kyiv-Zhytomyr, Ukraine.
+                                The
+                                temple was built between 1746 and 1748 and was founded by Bishop Samuel Jan Ozga.
+                            </div>
+                        </div>
+                        <div class="location-btns-wrapper">
+                            <div class="location-btn">
+                                <a class="location-link" href="/excursions/korolev-square/index.html">читати</a>
+                            </div>
+                            <div class="location-btn">
+                                <a class="location-link" href="https://maps.app.goo.gl/wrX7ZztxVnDiTBbh9">на карті</a>
+                            </div>
                         </div>
                     </div>
                     <div class="img">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/%D0%92%D0%BE%D0%B4%D0%BE%D0%BD%D0%B0%D0%BF%D1%96%D1%80%D0%BD%D0%B0_%D0%B2%D0%B5%D0%B6%D0%B0_%28%D0%96%D0%B8%D1%82%D0%BE%D0%BC%D0%B8%D1%80%29.jpg" alt="">
+                        <img src="assets/images/locations/korolev-square.jpg"
+                            class="rounded" alt="Майдан Корольова">
                     </div>
                 </div>
             </div>
-            <div class="roadmap-item-left"><img src="excursions-page/images/roadmap_line_right.svg" alt=""></div>
-            <div>
+
+            <div class="roadmap-item-left">
+                <img src="assets/images/roadmap_line_right.svg" alt="Лінія дорожньої карти справа">
+            </div>
+
+            <div class="roadmap-card">
+                <div class="info">
+                    <div class="location-text">
+                        <div class="font-size-lg font-weight-bold">
+                            Соборна площа та аптека
+                        </div>
+                        <div class="font-size-md font-weight-semibold">
+                            Kostelna Street, 8
+                        </div>
+                        <div>
+                            Saint Sophia Cathedral (Ukrainian: Кафедральний собор св. Софії) is a Catholic church
+                            that
+                            serves as the principal church of the Roman Catholic Diocese of Kyiv-Zhytomyr, Ukraine.
+                            The
+                            temple was built between 1746 and 1748 and was founded by Bishop Samuel Jan Ozga.
+                        </div>
+                    </div>
+                    <div class="location-btns-wrapper">
+                        <div class="location-btn">
+                            <a class="location-link" href="/excursions/sobornyi-square/index.html">читати</a>
+                        </div>
+                        <div class="location-btn">
+                            <a class="location-link" href="https://maps.app.goo.gl/HU39kEyDYaw6hVyM9">на карті</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="/excursions/sobornyi-square/assets/images/pharmacy-1.jpg" class="rounded" alt="Аптека">
+                </div>
+            </div>
+
+            <div class="roadmap-item-left">
+                <img src="assets/images/roadmap_line_left.svg" alt="Лінія дорожньої карти зліва">
+            </div>
+
+            <div class="roadmap-right-card-wrapper">
                 <div class="roadmap-card">
                     <div class="info">
-                        <div class="color-accent font-size-sm font-weight-semibold">Бібліотека імені Ольжича</div>
-                        <div class="color-text font-size-xsm font-weight-light">Kostelna Street, 8</div>
-                        <div class="color-text font-size-sm font-weight-light">
-                            Saint Sophia Cathedral (Ukrainian: Кафедральний собор св. Софії) is a Catholic church that serves as the principal church of the Roman Catholic Diocese of Kyiv-Zhytomyr, Ukraine. The temple was built between 1746 and 1748 and was founded by Bishop Samuel Jan Ozga.
+                        <div class="location-text">
+                            <div class="font-size-lg font-weight-bold">
+                                Замкова гора
+                            </div>
+                            <div class="font-size-md font-weight-semibold">
+                                Kostelna Street, 8
+                            </div>
+                            <div>
+                                Saint Sophia Cathedral (Ukrainian: Кафедральний собор св. Софії) is a Catholic church
+                                that
+                                serves as the principal church of the Roman Catholic Diocese of Kyiv-Zhytomyr, Ukraine.
+                                The
+                                temple was built between 1746 and 1748 and was founded by Bishop Samuel Jan Ozga.
+                            </div>
                         </div>
-                        <div class="btn-wrapper">
-                            <a href="">See on map</a>
+                        <div class="location-btns-wrapper">
+                            <div class="location-btn">
+                                <a class="location-link" href="/excursions/castle-hill/index.html">читати</a>
+                            </div>
+                            <div class="location-btn">
+                                <a class="location-link" href="https://maps.app.goo.gl/9khEdxk4ELVfbfd49">на карті</a>
+                            </div>
                         </div>
                     </div>
                     <div class="img">
-                        <img src="https://ube.nlu.org.ua/Image/2014051610545912.jpg"></img>
+                        <img src="/excursions/castle-hill/assets/images/church.jpg" class="rounded" alt="Конкатедральний Собор Святої Софії">
                     </div>
                 </div>
             </div>
-            <div class="roadmap-item-left"><img src="excursions-page/images/roadmap_line_left.svg" alt=""></div>
-            <div>
-                <div class="roadmap-card">
-                    <div class="info">
-                        <div class="color-accent font-size-sm font-weight-semibold">Вул. Михайлівська</div>
-                        <div class="color-text font-size-xsm font-weight-light">Kostelna Street, 8</div>
-                        <div class="color-text font-size-sm font-weight-light">
-                            Saint Sophia Cathedral (Ukrainian: Кафедральний собор св. Софії) is a Catholic church that serves as the principal church of the Roman Catholic Diocese of Kyiv-Zhytomyr, Ukraine. The temple was built between 1746 and 1748 and was founded by Bishop Samuel Jan Ozga.
+
+            <div class="roadmap-item-left">
+                <img src="assets/images/roadmap_line_right.svg" alt="Лінія дорожньої карти справа">
+            </div>
+
+            <div class="roadmap-card">
+                <div class="info">
+                    <div class="location-text">
+                        <div class="font-size-lg font-weight-bold">
+                            Оглядовий майданчик
                         </div>
-                        <div class="btn-wrapper">
-                            <a href="">See on map</a>
+                        <div class="font-size-md font-weight-semibold">
+                            Kostelna Street, 8
+                        </div>
+                        <div>
+                            Saint Sophia Cathedral (Ukrainian: Кафедральний собор св. Софії) is a Catholic church
+                            that
+                            serves as the principal church of the Roman Catholic Diocese of Kyiv-Zhytomyr, Ukraine.
+                            The
+                            temple was built between 1746 and 1748 and was founded by Bishop Samuel Jan Ozga.
                         </div>
                     </div>
-                    <div class="img">
-                        <img src="https://zt.20minut.ua/img/cache/news_new_m/news/0013/87/1286421-u-zhitomiri-13-14-lipnya-proydut-dni-vulitsi-mihaylivska.jpeg?hash=2019-07-05-10-30-48">
+                    <div class="location-btns-wrapper">
+                        <div class="location-btn">
+                            <a class="location-link" href="/excursions/observation-area/index.html">читати</a>
+                        </div>
+                        <div class="location-btn">
+                            <a class="location-link" href="https://maps.app.goo.gl/CKAxLoeprP8DtfVu6">на карті</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="roadmap-item-left"><img src="excursions-page/images/roadmap_line_right.svg" alt=""></div>
-            <div>
-                <div class="roadmap-card">
-                    <div class="info">
-                        <div class="color-accent font-size-sm font-weight-semibold">Аптека – “музей”</div>
-                        <div class="color-text font-size-xsm font-weight-light">Kostelna Street, 8</div>
-                        <div class="color-text font-size-sm font-weight-light">
-                            Saint Sophia Cathedral (Ukrainian: Кафедральний собор св. Софії) is a Catholic church that serves as the principal church of the Roman Catholic Diocese of Kyiv-Zhytomyr, Ukraine. The temple was built between 1746 and 1748 and was founded by Bishop Samuel Jan Ozga.
-                        </div>
-                        <div class="btn-wrapper">
-                            <a href="">See on map</a>
-                        </div>
-                    </div>
-                    <div class="img">
-                        <img src="https://ube.nlu.org.ua/Image/2014051610545912.jpg"></img>
-                    </div>
+                <div class="img">
+                    <img src="/excursions/observation-area/assets/images/view.jpg" class="rounded" alt="Оглядовий майданчик">
                 </div>
             </div>
-            <div class="roadmap-item-left"><img src="excursions-page/images/roadmap_line_left.svg" alt=""></div>
-            <div>
-                <div class="roadmap-card">
-                    <div class="info">
-                        <div class="color-accent font-size-sm font-weight-semibold">Замкова гора</div>
-                        <div class="color-text font-size-xsm font-weight-light">Kostelna Street, 8</div>
-                        <div class="color-text font-size-sm font-weight-light">
-                            Saint Sophia Cathedral (Ukrainian: Кафедральний собор св. Софії) is a Catholic church that serves as the principal church of the Roman Catholic Diocese of Kyiv-Zhytomyr, Ukraine. The temple was built between 1746 and 1748 and was founded by Bishop Samuel Jan Ozga.
-                        </div>
-                        <div class="btn-wrapper">
-                            <a href="">See on map</a>
-                        </div>
-                    </div>
-                    <div class="img">
-                        <img src="https://ube.nlu.org.ua/Image/2014051610545912.jpg"></img>
-                    </div>
-                </div>
+
+            <div class="roadmap-item-left">
+                <img src="assets/images/roadmap_line_left.svg" alt="Лінія дорожньої карти зліва">
             </div>
-            <div class="roadmap-item-left"><img src="excursions-page/images/roadmap_line_right.svg" alt=""></div>
-            <div>
+
+            <div class="roadmap-right-card-wrapper">
                 <div class="roadmap-card">
                     <div class="info">
-                        <div class="color-accent font-size-sm font-weight-semibold">Оглядовий майданчик</div>
-                        <div class="color-text font-size-xsm font-weight-light">Kostelna Street, 8</div>
-                        <div class="color-text font-size-sm font-weight-light">
-                            Saint Sophia Cathedral (Ukrainian: Кафедральний собор св. Софії) is a Catholic church that serves as the principal church of the Roman Catholic Diocese of Kyiv-Zhytomyr, Ukraine. The temple was built between 1746 and 1748 and was founded by Bishop Samuel Jan Ozga.
+                        <div class="location-text">
+                            <div class="font-size-lg font-weight-bold">
+                                Вул. Леха Качинського
+                            </div>
+                            <div>
+                                Saint Sophia Cathedral (Ukrainian: Кафедральний собор св. Софії) is a Catholic church
+                                that
+                                serves as the principal church of the Roman Catholic Diocese of Kyiv-Zhytomyr, Ukraine.
+                                The
+                                temple was built between 1746 and 1748 and was founded by Bishop Samuel Jan Ozga.
+                            </div>
                         </div>
-                        <div class="btn-wrapper">
-                            <a href="">See on map</a>
+                        <div class="location-btns-wrapper">
+                            <div class="location-btn">
+                                <a class="location-link" href="/excursions/lech-kachinsky-street/index.html">читати</a>
+                            </div>
+                            <div class="location-btn">
+                                <a class="location-link" href="https://maps.app.goo.gl/tqpt9R5QgCwEMNTw5">на карті</a>
+                            </div>
                         </div>
                     </div>
                     <div class="img">
-                        <img src="https://ube.nlu.org.ua/Image/2014051610545912.jpg"></img>
-                    </div>
-                </div>
-            </div>
-            <div class="roadmap-item-left"><img src="excursions-page/images/roadmap_line_left.svg" alt=""></div>
-            <div>
-                <div class="roadmap-card">
-                    <div class="info">
-                        <div class="color-accent font-size-sm font-weight-semibold">Вул. Леха Качинського</div>
-                        <div class="color-text font-size-xsm font-weight-light">Kostelna Street, 8</div>
-                        <div class="color-text font-size-sm font-weight-light">
-                            Saint Sophia Cathedral (Ukrainian: Кафедральний собор св. Софії) is a Catholic church that serves as the principal church of the Roman Catholic Diocese of Kyiv-Zhytomyr, Ukraine. The temple was built between 1746 and 1748 and was founded by Bishop Samuel Jan Ozga.
-                        </div>
-                        <div class="btn-wrapper">
-                            <a href="">See on map</a>
-                        </div>
-                    </div>
-                    <div class="img">
-                        <img src="https://ube.nlu.org.ua/Image/2014051610545912.jpg"></img>
+                        <img src="/excursions/lech-kachinsky-street/assets/images/bridge.jpg" class="rounded" alt="Вул. Леха Качинського">
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="section-project-authors">
+            <h1 class="section-project-authors-title font-size-xxlg">АВТОРИ ПРОЄКТУ</h1>
+        </section>
     </main>
 </body>
+
 </html>
