@@ -262,6 +262,12 @@ h1 span {
     max-height: 300px;
 }
 
+/* Override the default 300px max-height for map card */
+.map-card > .img {
+    max-height: none;
+    height: 100%;
+}
+
 .roadmap-card>.img>img {
     width: 100%;
     height: 100%;
@@ -330,7 +336,74 @@ section>* {
     opacity: 1;
 }
 
-@media (max-width: 1536px) {
+.map-card {
+    width: 100%;
+    padding: 20px;
+    aspect-ratio: 16/9;
+    display: flex;
+}
+
+.map-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.map-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.map-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.map-marker:hover {
+    transform: scale(1.2);
+}
+
+.map-marker::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px;
+    background: white;
+    border-radius: 4px;
+    font-size: var(--font-size-sm);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.map-marker:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Example positions - adjust these for your specific needs */
+.marker-1 { top: 93.4%; left: 81.4%; }
+.marker-2 { top: 78.6%; left: 69.4%; }
+.marker-3 { top: 58%; left: 77.5%; }
+.marker-4 { top: 35%; left: 81.3%; }
+.marker-5 { top: 15.2%; left: 48.2%; }
+.marker-6 { top: 22%; left: 12%; }
+.marker-7 { top: 29%; left: 15%; }
+.marker-8 { top: 62.3%; left: 33.15%; }
+
+@media (max-width: 1537px) {
     .intro-img {
         width: 800px;
         height: 550px;
@@ -358,45 +431,67 @@ section>* {
         width: 70%;
     }
 
-    .section-roadmap>div:nth-child(4n + 4) {
-        margin: 0px;
+    /* Override for map card specifically */
+    .map-card {
+        width: 100% !important; /* Override the 70% width */
+        padding: 20px;
+        aspect-ratio: 16/9;
+    }
+
+    .map-card > .img {
+        max-height: none !important;
+        height: 100% !important;
+        width: 100%;
+    }
+
+    .map-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    /* Marker positions */
+    .marker-1 { top: 93.5%; left: 81.3%; }
+    .marker-2 { top: 78.6%; left: 69.2%; }
+    .marker-3 { top: 57.9%; left: 77.4%; }
+    .marker-4 { top: 34.9%; left: 81.1%; }
+    .marker-5 { top: 14.7%; left: 48.1%; }
+    .marker-6 { top: 21.2%; left: 12.1%; }
+    .marker-7 { top: 28.7%; left: 15%; }
+    .marker-8 { top: 62.6%; left: 33.1%; }
+
+    .map-marker {
+        width: 16px;
+        height: 16px;
+    }
+
+    .map-marker::before {
+        font-size: var(--font-size-xsm);
+        padding: 6px;
     }
 }
 
 @media (max-width: 1366px) {
-    .intro-img {
-        width: 700px;
-        height: 500px;
+    /* Use same indent values as the 1537px breakpoint for easy editing */
+    .marker-1 { top: 93.5%; left: 81.3%; }
+    .marker-2 { top: 78.6%; left: 69.25%; }
+    .marker-3 { top: 57.9%; left: 77.4%; }
+    .marker-4 { top: 34.9%; left: 81.2%; }
+    .marker-5 { top: 14.7%; left: 48.2%; }
+    .marker-6 { top: 21.2%; left: 12%; }
+    .marker-7 { top: 28.7%; left: 15%; }
+    .marker-8 { top: 62.6%; left: 33.15%; }
+
+    /* Slightly smaller markers for this breakpoint */
+    .map-marker {
+        width: 14px;
+        height: 14px;
     }
 
-    .content-side-span {
-        top: 30%;
-        min-width: 150%;
-    }
-
-    .font-weight-bold {
-        font-weight: 500;
-    }
-
-    .font-size-lg {
-        font-size: 24px;
-    }
-
-    .section-intro>.content-authors>div>span {
-        width: 60%;
-        left: 20%;
-    }
-
-    .roadmap-card {
-        width: 85%;
-    }
-
-    .font-size-xxlg {
-        font-size: 60px;
-    }
-
-    .location-text > .font-size-lg {
-        font-size: 26px;
+    .map-marker::before {
+        font-size: var(--font-size-xsm);
+        padding: 5px;
     }
 }
 
@@ -420,6 +515,7 @@ section>* {
     body {
         padding-top: 10px;
         width: 100%;
+        overflow-x: hidden;
     }
 
     .header-top .city-logo img {
@@ -466,6 +562,7 @@ section>* {
         align-items: center;
         margin-bottom: 50px;
     }
+    
 
     .section-intro>.content-authors>div>span {
         top: -70px;
@@ -544,4 +641,9 @@ section>* {
     body > main > section.section-project-authors > h1 {
         font-size: 2rem;
     }
+}
+
+.map-img a {
+    text-decoration: none;
+    display: contents;
 }
