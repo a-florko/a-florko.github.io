@@ -162,10 +162,10 @@ h1 span {
 .content-span {
     border-radius: 10px;
     position: absolute;
-    z-index: 2;
     display: block;
     padding: 50px;
     background: white;
+    border: 3px solid rgb(105, 123, 126);
 }
 
 .content-side-span {
@@ -177,7 +177,7 @@ h1 span {
 }
 
 .section-intro>.content-qr>div>span {
-    top: 35%;
+    top: 10%;
     right: 0%;
 }
 
@@ -411,7 +411,7 @@ section>* {
 
     .section-intro>.content-info>div>span,
     .section-intro>.content-qr>div>span {
-        top: 35%;
+        top: 5%;
     }
 
     .content-side-span {
