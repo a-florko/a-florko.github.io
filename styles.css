@@ -190,7 +190,6 @@ h1 span {
 }
 
 .intro-img {
-    width: 900px;
     height: 600px;
 }
 
@@ -405,7 +404,6 @@ section>* {
 
 @media (max-width: 1537px) {
     .intro-img {
-        width: 800px;
         height: 550px;
     }
 
