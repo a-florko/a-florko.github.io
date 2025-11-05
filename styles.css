@@ -163,7 +163,7 @@ h1 span {
     border-radius: 10px;
     position: absolute;
     display: block;
-    padding: 50px;
+    padding: 40px;
     background: white;
     border: 3px solid rgb(105, 123, 126);
 }
@@ -173,18 +173,18 @@ h1 span {
 }
 
 .section-intro>.content-info>div>span {
-    top: 35%;
+    top: 5%;
 }
 
 .section-intro>.content-qr>div>span {
-    top: 10%;
+    top: 5%;
     right: 0%;
 }
 
 .section-intro>.content-authors>div>span {
     width: 50%;
     left: 25%;
-    top: -140px;
+    top: -150px;
     min-width: 0%;
     text-align: center;
 }
@@ -407,11 +407,6 @@ section>* {
         height: 550px;
     }
 
-    .section-intro>.content-info>div>span,
-    .section-intro>.content-qr>div>span {
-        top: 5%;
-    }
-
     .content-side-span {
         min-width: 160%;
     }
@@ -470,6 +465,17 @@ section>* {
     }
 }
 
+@media (max-width: 1407px) {
+    .content-span {
+        padding: 30px;
+    }
+
+    .section-intro>.content-authors>div>span {
+     top: -130px
+    }
+}
+
+
 @media (max-width: 1366px) {
     /* Use same indent values as the 1537px breakpoint for easy editing */
     .marker-1 { top: 93.5%; left: 81.3%; }
@@ -490,6 +496,10 @@ section>* {
     .map-marker::before {
         font-size: var(--font-size-xsm);
         padding: 5px;
+    }
+
+    .intro-img {
+        height: 495px;
     }
 }
 
