@@ -276,36 +276,64 @@ section .content > .content-inner {
 footer {
     padding-top: 25px;
     border-top: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer > div:first-child {
     text-align: center;
-    padding-top:25px;
+    width: 100%;
+    padding-top: 25px;
+}
+
+footer > div:first-child h4 {
+    color: var(--color-text-darkgrey);
+    margin: 0;
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
+    font-size: clamp(1rem, 1.6vw, 1.4rem);
 }
 
 footer > div:last-child {
-    padding: 50px 0;
+    width: 100%;
+    padding: 30px 0 50px 0;
     display: flex;
-    gap: 50px;
+    gap: clamp(12px, 3vw, 50px);
     justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 footer > div > div {
-    width: 100px;
-    height: 100px;
+    width: clamp(48px, 8vw, 140px);
+    height: auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
 }
 
 footer > div > div > img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 footer > div > div:nth-child(2) {
-    width: 60px;
+    width: clamp(36px, 5vw, 100px);
 }
 
 footer > div > div:last-child {
-    width: 300px;
+    width: clamp(80px, 20vw, 320px);
+}
+
+@media (max-width: 600px) {
+    footer { padding-top: 20px; }
+    footer > div:first-child h4 { font-size: 1rem; }
+    footer > div:last-child { padding: 16px 0 24px; gap: 12px; }
+    footer > div > div { padding: 6px; }
 }
 
 .nav-mobile {
