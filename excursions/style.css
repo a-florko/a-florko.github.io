@@ -10,6 +10,8 @@
     --font-size-sm: calc(var(--font-size-base));
     --font-size-xsm: calc(var(--font-size-base) * .8);
 
+    --font-weight-bold: 600;
+
     --color-background-skyblue: #95bec3;
     --color-background-lightblue: rgba(240, 248, 255, 0.82);
     --color-background-darkblue: ;
@@ -514,7 +516,7 @@ section > * {
 
 .lang-title {
     color: var(--color-text-darkgrey);
-    font-size: var(--font-size-md);
+    font-size: 22px;
     font-weight: var(--font-weight-bold);
     margin-bottom: 30px;
     line-height: 1.4;

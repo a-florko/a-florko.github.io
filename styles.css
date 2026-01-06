@@ -542,7 +542,84 @@ section>* {
 }
 
 
+/* Language Modal Styles */
+.lang-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dimmed background */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* On top of everything */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
+.lang-modal-overlay.show {
+    opacity: 1;
+}
+
+.lang-modal-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    border: 3px solid var(--color-accent);
+}
+
+.lang-modal-overlay.show .lang-modal-box {
+    transform: translateY(0);
+}
+
+.lang-title {
+    color: var(--color-text-darkgrey);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.lang-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lang-btn {
+    padding: 12px 20px;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    border: 2px solid var(--color-accent);
+    background-color: white;
+    color: var(--color-accent);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+.lang-btn:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.lang-btn.primary {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.lang-btn.primary:hover {
+    background-color: #0e4f5f; /* Slightly darker shade */
+    border-color: #0e4f5f;
+}
 
 /* Responsive adjustment for credits */
 @media (max-width: 600px) {
