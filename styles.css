@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900&family=Roboto&display=swap');
 
 :root {
     --font-size-xxlg: 72px;
@@ -7,15 +7,14 @@
     --font-size-md: 22px;
     --font-size-sm: 16px;
     --font-size-xsm: 14px;
-
     --font-weight-bold: 600;
     --font-weight-semibold: 400;
     --font-weight-regular: 300;
     --font-weight-light: 200;
-
     --color-accent: #126478;
     --color-bg: #95bec3;
     --color-text-darkgrey: #2F4F4F;
+    --color-white: white;
 }
 
 * {
@@ -23,30 +22,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-}
-
-.font-size-md {
-    font-size: var(--font-size-md);
-}
-
-.font-size-lg {
-    font-size: var(--font-size-lg);
-}
-
-.font-size-xlg {
-    font-size: var(--font-size-xlg);
-}
-
-.font-size-xxlg {
-    font-size: var(--font-size-xxlg);
-}
-
-.font-weight-bold {
-    font-weight: 600;
-}
-
-.font-weight-semibold {
-    font-weight: 500;
 }
 
 html {
@@ -80,22 +55,19 @@ header nav {
     height: 100%;
 }
 
+.main-title {
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+}
 
-header .header-top {
+.header-top {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     vertical-align: bottom;
-}
-
-.main-title {
-    max-height: 10%;
-    font-weight: bold;
-    display: flex;
-    align-items: flex-end;
-    color: var(--color-text-darkgrey);
 }
 
 .header-top .city-logo,
@@ -106,91 +78,40 @@ header .header-top {
     align-content: flex-end;
 }
 
-.header-top .city-logo img {
+.project-logo img {
     height: 70px;
     width: 95px;
 }
 
-.header-top .project-logo img {
-    height: 80px;
-}
-
-/* Header links (title left, links right) */
-.header-links {
-    display: flex;
-    gap: 18px;
-    align-items: center;
-}
-
-.header-link {
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--color-text-darkgrey);
-    font-size: 1.75rem; /* slightly larger */
-    line-height: 1;
-    padding: 14px 22px; /* small padding increase */
-    border-radius: 8px;
-    border: 2px solid transparent;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.12s;
-}
-
-.header-link:hover {
-    background-color: var(--color-accent);
-    color: var(--color-white);
-    border-color: var(--color-accent);
-    transform: translateY(-1px);
-}
-
-/* Responsive tweak for small screens */
-@media (max-width: 480px) {
-    .header-link {
-        font-size: 1.125rem;
-        padding: 8px 10px;
-    }
-}
-
-header>h1 {
-    font-size: 2rem;
-    text-align: center;
-    padding: 100px 150px;
-    transform: scale(1.2);
-    transition-duration: 1.5s;
-}
-
-h1 span {
-    font-size: 3rem;
-    display: block;
+.intro-img {
+    height: 600px;
 }
 
 .section-intro {
     border-bottom: 3px solid var(--color-accent);
+    padding-bottom: 100px;
 }
 
-.section-intro>.content {
+.section-intro > .content {
     display: flex;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+}
+
+.section-intro > .content > div {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 
 .content-qr {
     flex-direction: row-reverse;
 }
 
-.section-intro>.content>div {
+.content-qr > div {
     flex: 1;
-}
-
-.section-intro>.content>div:first-child {
-    position: relative;
-}
-
-.section-intro>.content-authors {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 240px;
-}
-
-.section-intro>.content-authors>div:first-child {
-    width: 100%;
+    height: 100%;
 }
 
 .content-span {
@@ -206,245 +127,8 @@ h1 span {
     min-width: 125%;
 }
 
-.section-intro>.content-info>div>span {
-    top: 5%;
-}
-
-.section-intro>.content-qr>div>span {
-    top: 5%;
-    right: 0%;
-}
-
-.section-intro>.content-authors>div>span {
-    width: 50%;
-    left: 25%;
-    top: -150px;
-    min-width: 0%;
-    text-align: center;
-}
-
-.intro-img {
-    height: 600px;
-}
-
 .rounded {
     border-radius: 10px;
-}
-
-.section-roadmap-icon {
-    height: 100px;
-    width: 80px;
-}
-
-.roadmap-right-card-wrapper {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.section-roadmap {
-    margin-top: 40px;
-    border-bottom: 3px solid var(--color-accent);
-    padding-bottom: 100px;
-}
-
-.section-roadmap-title {
-    display: block;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.section-roadmap-title {
-    color: var(--color-text-darkgrey);
-    text-align: center;
-}
-
-.section-roadmap>div:nth-child(4n + 4) {
-    display: flex;
-    margin: -5px 100px -5px 0;
-}
-
-.roadmap-card {
-    width: 60%;
-    display: flex;
-    gap: 25px;
-    box-shadow: 0 8px 14px rgba(34, 74, 152, 0.3);
-    padding: 50px;
-    background: white;
-    border-radius: 10px;
-}
-
-.roadmap-card>.info {
-    flex: 3;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-}
-
-.location-text {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding-bottom: 10px;
-}
-
-.roadmap-card>.img {
-    flex: 2;
-    width: 100%;
-    max-height: 300px;
-}
-
-/* Override the default 300px max-height for map card */
-.map-card > .img {
-    max-height: none;
-    height: 100%;
-}
-
-.roadmap-card>.img>img {
-    width: 100%;
-    height: 100%;
-}
-
-.roadmap-item-left {
-    position: relative;
-    z-index: -1;
-    height: 20vw;
-    display: flex;
-    justify-content: center;
-    margin: -5px 0 -5px 0;
-}
-
-.roadmap-item-left>img {
-    height: 100%;
-}
-
-.location-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    border-radius: 10px;
-    background: var(--color-accent);
-    text-decoration: none;
-    width: 50%;
-}
-
-.location-btns-wrapper {
-    width: 100%;
-    display: flex;
-    gap: 10px;
-    margin-top: 12px;
-}
-
-.location-link {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section>* {
-    opacity: 0;
-    transition: opacity 0.6s ease-in-out;
-}
-
-.section-project-authors {
-    border-bottom: 3px solid var(--color-accent);
-    padding: 40px 0 60px;
-}
-
-.section-project-authors-title {
-    color: var(--color-text-darkgrey);
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Authors grid: responsive layout with flexible spacing and font sizes */
-.authors-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: clamp(16px, 2.5vw, 30px);
-    margin-top: 20px;
-    width: 100%;
-}
-
-.author-card {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-    text-align: left;
-}
-
-.author-photo {
-    width: 100%;
-    aspect-ratio: 2 / 3; /* 4x6 ratio */
-    overflow: hidden;
-    border-radius: 8px;
-    background: #f5f5f5;
-}
-
-.author-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.author-name {
-    font-size: clamp(1.25rem, 2.4vw, 2.25rem); /* ~20px - 36px */
-    font-weight: var(--font-weight-bold);
-    color: var(--color-text-darkgrey);
-}
-
-.author-affiliation {
-    font-size: clamp(1rem, 1.5vw, 1.75rem); /* ~16px - 28px */
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-text-darkgrey);
-}
-
-.author-bio {
-    font-size: clamp(1rem, 1.6vw, 1.125rem);
-    color: var(--color-text-darkgrey);
-    line-height: 1.5;
-}
-
-/* Medium screens (tablets / small laptops): 3 columns */
-@media (max-width: 1200px) {
-    .authors-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Small laptops / landscape phones: 2 columns */
-@media (max-width: 900px) {
-    .authors-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Phones: single column and centered content */
-@media (max-width: 600px) {
-    .authors-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    .author-card {
-        align-items: center;
-        text-align: center;
-    }
-    .author-name { font-size: 1.25rem; }
-    .author-affiliation { font-size: 1rem; }
-    .author-bio { font-size: 1rem; }
-}
-
-.fade-in {
-    opacity: 1;
 }
 
 .map-card {
@@ -455,12 +139,6 @@ section>* {
 }
 
 .map-img {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.map-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -504,109 +182,111 @@ section>* {
     visibility: visible;
 }
 
-/* Example positions - adjust these for your specific needs */
-.marker-1 { top: 93.4%; left: 81.4%; }
-.marker-2 { top: 78.6%; left: 69.4%; }
-.marker-3 { top: 58%; left: 77.5%; }
-.marker-4 { top: 35%; left: 81.3%; }
-.marker-5 { top: 15.2%; left: 48.2%; }
-.marker-6 { top: 22%; left: 12%; }
-.marker-7 { top: 29%; left: 15%; }
-.marker-8 { top: 62.3%; left: 33.15%; }
-
-/* Project Credits / Acknowledgments Styles */
-.project-credits {
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 2px solid rgba(47, 79, 79, 0.2); /* Light version of text-darkgrey */
-    text-align: center;
+.lang-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lang-modal-overlay.show {
+    opacity: 1;
+}
+
+.lang-modal-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    border: 3px solid var(--color-accent);
+}
+
+.lang-modal-overlay.show .lang-modal-box {
+    transform: translateY(0);
+}
+
+.lang-title {
+    color: var(--color-text-darkgrey);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.lang-buttons {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 15px;
 }
 
-.project-credits p {
-    color: var(--color-text-darkgrey);
-    font-size:  1.23rem; /* slightly smaller than body text for credits */
-    font-weight: var(--font-weight-semibold);
-    line-height: 1.6;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 10px;
+.lang-btn {
+    padding: 12px 20px;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    border: 2px solid var(--color-accent);
+    background-color: white;
+    color: var(--color-accent);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
 }
 
-.designer-credit {
-    margin-top: 10px;
-    font-weight: var(--font-weight-bold) !important;
+.lang-btn:hover {
+    background-color: var(--color-accent);
+    color: white;
 }
 
-/* Responsive adjustment for credits */
+.lang-btn.primary {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.lang-btn.primary:hover {
+    background-color: #0e4f5f;
+    border-color: #0e4f5f;
+}
+
 @media (max-width: 600px) {
     .project-credits {
         margin-top: 40px;
         padding-top: 30px;
         gap: 20px;
     }
-    
     .project-credits p {
         font-size: 0.85rem;
     }
 }
 
 @media (max-width: 1584px) {
-        .section-intro>.content-authors>div>span {
+    .section-intro>.content-authors>div>span {
         width: 60%;
         left: 20%;
     }
 }
 
 @media (max-width: 1537px) {
-    .intro-img {
-        height: 550px;
-    }
-
-    .content-side-span {
-        min-width: 160%;
-    }
-
-    .font-size-lg {
-        font-size: 26px;
-    }
-
-    .roadmap-card {
-        width: 70%;
-    }
-
-    /* Override for map card specifically */
-    .map-card {
-        width: 100% !important; /* Override the 70% width */
-        padding: 20px;
-        aspect-ratio: 16/9;
-    }
-
-    .map-card > .img {
-        max-height: none !important;
-        height: 100% !important;
-        width: 100%;
-    }
-
-    .map-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-    
-    /* Marker positions */
     .marker-1 { top: 93.5%; left: 81.3%; }
-    .marker-2 { top: 78.6%; left: 69.2%; }
+    .marker-2 { top: 78.6%; left: 69.25%; }
     .marker-3 { top: 57.9%; left: 77.4%; }
-    .marker-4 { top: 34.9%; left: 81.1%; }
-    .marker-5 { top: 14.7%; left: 48.1%; }
-    .marker-6 { top: 21.2%; left: 12.1%; }
-    .marker-7 { top: 28.7%; left: 15%; }
-    .marker-8 { top: 62.6%; left: 33.1%; }
+    .marker-4 { top: 34.9%; left: 81.2%; }
+    .marker-5 { top: 14.7%; left: 48.2%; }
+    .marker-6 { top: 21.2%; left: 12%; }
+    .marker-7 { top: 28.7; left: 15%; }
+    .marker-8 { top: 62.6%; left: 33.15%; }
 
     .map-marker {
         width: 16px;
@@ -619,268 +299,11 @@ section>* {
     }
 }
 
-@media (max-width: 1407px) {
-    .content-span {
-        padding: 30px;
-    }
-
-    .section-intro>.content-authors>div>span {
-     top: -130px
-    }
-}
-
-
-@media (max-width: 1366px) {
-    /* Use same indent values as the 1537px breakpoint for easy editing */
-    .marker-1 { top: 93.5%; left: 81.3%; }
-    .marker-2 { top: 78.6%; left: 69.25%; }
-    .marker-3 { top: 57.9%; left: 77.4%; }
-    .marker-4 { top: 34.9%; left: 81.2%; }
-    .marker-5 { top: 14.7%; left: 48.2%; }
-    .marker-6 { top: 21.2%; left: 12%; }
-    .marker-7 { top: 28.7%; left: 15%; }
-    .marker-8 { top: 62.6%; left: 33.15%; }
-
-    /* Slightly smaller markers for this breakpoint */
-    .map-marker {
-        width: 14px;
-        height: 14px;
-    }
-
-    .map-marker::before {
-        font-size: var(--font-size-xsm);
-        padding: 5px;
-    }
-
-    .intro-img {
-        height: 495px;
-    }
-}
-
 @media (max-width: 414px) {
-    .font-size-md {
-        font-size: 17px;
-    }
-
-    .font-size-lg {
-        font-size: 16px;
-    }
-
-    .font-size-xlg {
-        font-size: 21px;
-    }
-
-    .font-size-xxlg {
-        font-size: 36px;
-    }
-
-    body {
-        padding-top: 10px;
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    .header-top .city-logo img {
-        height: 45px;
-        width: 60px;
-        margin-left: 10px;
-    }
-
-    .header-top .project-logo img {
-        height: 50px;
-        margin-right: 10px;
-    }
-
-    .section-intro>.content {
-        margin-top: 80px;
-    }
-    
-    .section-intro > .content-qr > div  {
-        width: 40%;
-        margin-top: 50px;
-    }
-
-    .section-intro > .content-qr > div, .section-intro > .content-info > div  {
-        width: 40%;
-    }
-
-    .section-intro>.content-qr>div>span, .section-intro>.content-info>div>span {
-        left: -38%;
-        top: -70px;
-        text-align: center;
-    }
-
-    .content-side-span {
-        min-width: 175%;
-    }
-
-    .section-intro>.content-authors {
-        margin-top: 130px;
-    }
-
-    .section-intro>.content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 50px;
-    }
-    
-
-    .section-intro>.content-authors>div>span {
-        top: -70px;
-    }
-
-    .section-intro>.content-authors>div:first-child {
-        width: 120%;
-    }
-
-    .content-span {
-        padding: 20px;
-    }
-
-    .intro-img {
-        width: 90%;
-        height: auto;
-    }
-
-    .section-roadmap {
-        margin-top: 50px;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    .section-roadmap-icon {
-        height: 50px;
-        width: 40px;
-    }
-
-    .section-roadmap-title {
-        margin-left: 10px;
-    }
-
-    .section-roadmap-title {
-        display: flex;
-        justify-content: center;
-    }
-
-    .location-text > .font-size-lg {
-        font-size: 21px;
-    }
-
-    .roadmap-card {
-        width: 100%;
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .roadmap-item-left {
-        height: 25vh;
-    }
-}
-
-@media (max-width: 360px) {
     .font-size-xlg {
         font-size: 19px;
     }
 
-    .section-intro > .content-info > div, .section-intro > .content-qr > div {
-        width: 50%;
-    }
-
-    .section-intro>.content-info>div>span, .section-intro>.content-qr>div>span  {
-        left: -25%;
-    }
-
-    .section-intro>.content-authors>div>span {
-        width: 75%;
-    }
-
-    .section-intro>.content-authors>div>span {
-        left: 12.5%;
-    }
-
-    body > main > section.section-project-authors > h1 {
+    .section-project-authors > h1 {
         font-size: 2rem;
     }
-}
-
-.map-img a {
-    text-decoration: none;
-    display: contents;
-}
-
-/* Footer styles copied from excursions/style.css */
-footer {
-    padding-top: 25px;
-    /* no border on main page */
-    border-top: none;
-
-    /* center children horizontally (heading + logos) */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-footer > div:first-child {
-    text-align: center;
-    width: 100%;
-}
-
-/* Make footer heading bigger */
-footer > div:first-child h4 {
-    color: var(--color-text-darkgrey);
-    margin: 0;
-    font-weight: var(--font-weight-semibold);
-    text-align: center;
-}
-
-/* Restore excursions-like spacing: make logo row full-width and space logos */
-footer > div:last-child {
-    width: 100%;
-    padding: 30px 0 50px 0;
-    display: flex;
-    gap: 50px;
-    justify-content: space-around; /* spread across the row */
-    align-items: center;
-    flex-direction: row;
-    /* allow wrapping on very narrow screens */
-    flex-wrap: wrap;
-}
-
-footer > div > div {
-    width: 120px; /* slightly larger */
-    height: 120px; /* slightly larger */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer > div > div > img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-footer > div > div:nth-child(2) {
-    width: 70px; /* slightly larger */
-}
-
-footer > div > div:last-child {
-    width: 320px; /* slightly larger */
-}
-
-/* Responsive: reduce logo sizes on small screens so they don't dominate */
-@media (max-width: 480px) {
-    footer > div > div {
-        width: 90px;
-        height: 90px;
-    }
-
-    footer > div > div:nth-child(2) {
-        width: 55px;
-    }
-
-    footer > div > div:last-child {
-        width: 220px;
-    }
-}
