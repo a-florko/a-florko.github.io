@@ -514,6 +514,46 @@ section>* {
 .marker-7 { top: 29%; left: 15%; }
 .marker-8 { top: 62.3%; left: 33.15%; }
 
+/* Project Credits / Acknowledgments Styles */
+.project-credits {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid rgba(47, 79, 79, 0.2); /* Light version of text-darkgrey */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-credits p {
+    color: var(--color-text-darkgrey);
+    font-size:  1.23rem; /* slightly smaller than body text for credits */
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.designer-credit {
+    margin-top: 10px;
+    font-weight: var(--font-weight-bold) !important;
+}
+
+/* Responsive adjustment for credits */
+@media (max-width: 600px) {
+    .project-credits {
+        margin-top: 40px;
+        padding-top: 30px;
+        gap: 20px;
+    }
+    
+    .project-credits p {
+        font-size: 0.85rem;
+    }
+}
+
 @media (max-width: 1584px) {
         .section-intro>.content-authors>div>span {
         width: 60%;
