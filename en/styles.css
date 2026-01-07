@@ -1,0 +1,30 @@
+.map-img .marker-1 { top: 89.8%; left: 80.2%; }
+.map-img .marker-2 { top: 75.2%; left: 68.2%; }
+.map-img .marker-3 { top: 54.6%; left: 76.3%; }
+.map-img .marker-4 { top: 31.6%; left: 80.1%; }
+.map-img .marker-5 { top: 12%; left: 47%; }
+.map-img .marker-6 { top: 19%; left: 10.8%; }
+.map-img .marker-7 { top: 26%; left: 13.9%; }
+.map-img .marker-8 { top: 59.3%; left: 32.05%; }
+
+@media (max-width: 1537px) {
+    .map-img .marker-1 { top: 90.2%; left: 80.12%; }
+    .map-img .marker-2 { top: 75.2%; left: 68.1%; }
+    .map-img .marker-3 { top: 54.5%; left: 76.2%; }
+    .map-img .marker-4 { top: 31.6%; left: 80%; }
+    .map-img .marker-5 { top: 11.2%; left: 47%; }
+    .map-img .marker-6 { top: 18.5%; left: 10.8%; }
+    .map-img .marker-7 { top: 25.6%; left: 13.87%; }
+    .map-img .marker-8 { top: 59.5%; left: 32%; }
+}
+
+@media (max-width: 1366px) {
+    .map-img .marker-1 { top: 90.5%; left: 80.1%; }
+    .map-img .marker-2 { top: 75.5%; left: 68.1%; }
+    .map-img .marker-3 { top: 54.5%; left: 76.24%; }
+    .map-img .marker-4 { top: 31.5%; left: 80%; }
+    .map-img .marker-5 { top: 11.5%; left: 47%; }
+    .map-img .marker-6 { top: 18.9%; left: 10.8%; }
+    .map-img .marker-7 { top: 25.7%; left: 13/9%; }
+    .map-img .marker-8 { top: 59.3%; left: 32%; }
+}
