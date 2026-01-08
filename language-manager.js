@@ -3,18 +3,43 @@ document.addEventListener("DOMContentLoaded", function () {
     const savedLang = localStorage.getItem(storageKey);
     const currentPath = window.location.pathname;
 
+    // Перевірка, чи це англійська версія (шукаємо '/en/' у шляху)
     const isEnglishPage = currentPath.includes('/en/') || currentPath.endsWith('/en');
 
+    // 1. ЛОГІКА АВТОМАТИЧНОГО РЕДІРЕКТУ (тільки при першому вході)
+    // Якщо збережено EN, але ми не на EN сторінці -> редірект
     if (savedLang === 'en' && !isEnglishPage) {
         redirectToEnglish();
-        return;
+    }
+    // Якщо збережено UA, але ми на EN сторінці -> редірект на UA
+    else if (savedLang === 'ua' && isEnglishPage) {
+        redirectToUkrainian();
+    }
+    // Якщо вибору немає -> показуємо модалку
+    else if (!savedLang && !isEnglishPage) {
+        createAndShowModal();
     }
 
-    if (savedLang || isEnglishPage) {
-        return;
+    // 2. ЛОГІКА КНОПКИ ПЕРЕМИКАННЯ МОВИ
+    // Шукаємо кнопку за ID (вона має бути додана в HTML)
+    const switchBtn = document.getElementById('lang-switch');
+    if (switchBtn) {
+        switchBtn.addEventListener('click', function(e) {
+            e.preventDefault(); // Щоб не спрацьовував стандартний перехід по посиланню
+            
+            if (isEnglishPage) {
+                // Якщо ми на EN, перемикаємо на UA
+                localStorage.setItem(storageKey, 'ua');
+                redirectToUkrainian();
+            } else {
+                // Якщо ми на UA, перемикаємо на EN
+                localStorage.setItem(storageKey, 'en');
+                redirectToEnglish();
+            }
+        });
     }
 
-    createAndShowModal();
+    // --- ФУНКЦІЇ ---
 
     function createAndShowModal() {
         const overlay = document.createElement('div');
@@ -31,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btnContainer.className = 'lang-buttons';
 
         const btnUA = document.createElement('button');
-        btnUA.className = 'lang-btn';
+        btnUA.className = 'lang-btn primary';
         btnUA.textContent = 'Українська';
         
         const btnEN = document.createElement('button');
@@ -73,13 +98,30 @@ document.addEventListener("DOMContentLoaded", function () {
     function redirectToEnglish() {
         let path = window.location.pathname;
         
+        // Логіка додавання /en/ у шлях
         if (path.endsWith('index.html')) {
-            path = path.substring(0, path.lastIndexOf('index.html'));
+            // .../castle-hill/index.html -> .../castle-hill/en/index.html
+            path = path.replace('index.html', 'en/index.html');
+        } else if (path.endsWith('/')) {
+            path = path + 'en/';
+        } else {
+            path = path + '/en/';
         }
-        if (path.endsWith('/')) {
-            path = path.substring(0, path.length - 1);
-        }
+        window.location.href = path;
+    }
 
-        window.location.href = path + '/en/';
+    function redirectToUkrainian() {
+        let path = window.location.pathname;
+        
+        // Логіка видалення /en/ зі шляху
+        // Наприклад: .../castle-hill/en/index.html -> .../castle-hill/index.html
+        path = path.replace('/en/', '/');
+        
+        // Якщо раптом шлях закінчується просто на /en (без слеша), прибираємо і його
+        if (path.endsWith('/en')) {
+            path = path.substring(0, path.length - 3);
+        }
+        
+        window.location.href = path;
     }
 });

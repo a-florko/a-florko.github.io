@@ -95,7 +95,7 @@ nav .nav-list {
 }
 
 .nav-list > li > a:hover {
-    color: var(--color-accent-deepblue) !important;
+    color: var(--color-accent-deepblue);
 }
 
 nav > .nav-logo {
@@ -552,8 +552,37 @@ section > * {
 }
 
 .lang-btn.primary:hover {
-    background-color: #0e4f5f; /* Slightly darker shade */
+    background-color: #0e4f5f;
     border-color: #0e4f5f;
+}
+
+.lang-switch-btn {
+    display: inline-block;
+    padding: 10px 20px !important;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgba(18, 100, 120, 0.2);
+    color: white !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: -5px;
+}
+
+.lang-switch-btn:hover {
+    background-color: var(--color-accent-deepblue);
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width: 639px) {
+    .lang-switch-btn {
+        background-color: white;
+        color: var(--color-accent-deepblue) !important;
+        width: auto;
+        display: inline-block;
+        margin-top: 10px;
+    }
 }
 
 @media (min-width: 1340px) and (max-width: 1680px) {

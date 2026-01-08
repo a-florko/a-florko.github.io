@@ -136,7 +136,7 @@ header .header-top {
 
 .header-link:hover {
     background-color: var(--color-accent);
-    color: var(--color-white);
+    color: white;
     border-color: var(--color-accent);
     transform: translateY(-1px);
 }
@@ -692,6 +692,16 @@ section>* {
         font-size: var(--font-size-xsm);
         padding: 6px;
     }
+}
+
+.lang-switch-btn {
+    padding: 14px 18px;
+    cursor: pointer;
+}
+
+.lang-switch-btn:hover {
+    background-color: var(--color-accent);
+    color: white;
 }
 
 @media (max-width: 1407px) {
